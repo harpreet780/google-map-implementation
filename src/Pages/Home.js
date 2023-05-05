@@ -48,8 +48,6 @@ const Home = () => {
     setMap(null)
   }
 
-  console.log(map, "mappp")
-
   return (
     <div className='d-flex justify-content-center p-5'>
       {
@@ -62,8 +60,8 @@ const Home = () => {
             onUnmount={onUnmount}
           >
             {markerList.map((places) => {
-              let lat = parseFloat(places.lat, 10);
-              let lng = parseFloat(places.lng, 10);
+              let lat = places.lat
+              let lng = places.lng
 
               return (
                 <Marker
